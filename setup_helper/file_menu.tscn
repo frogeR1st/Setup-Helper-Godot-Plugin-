@@ -1,0 +1,129 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3cuepa8lpsy0"]
+
+[ext_resource type="Script" path="res://addons/setup_helper/file_menu.gd" id="1_ed1dc"]
+
+[node name="File Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ed1dc")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.475
+anchor_bottom = 0.178
+offset_bottom = -0.160004
+text = "Scripts Folder"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525
+anchor_right = 1.0
+anchor_bottom = 0.178
+offset_left = -6.10352e-05
+offset_bottom = -0.160004
+text = "Saves Folder"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.222
+anchor_right = 0.475
+anchor_bottom = 0.4
+offset_top = 0.159988
+text = "Object Folder"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525
+anchor_top = 0.222
+anchor_right = 1.0
+anchor_bottom = 0.4
+offset_left = -6.10352e-05
+offset_top = 0.159988
+text = "Levels Folder"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.444
+anchor_right = 0.475
+anchor_bottom = 0.622
+offset_top = 0.319977
+offset_bottom = 0.159973
+text = "Huds Folder"
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525
+anchor_top = 0.444
+anchor_right = 1.0
+anchor_bottom = 0.622
+offset_left = -6.10352e-05
+offset_top = 0.319977
+offset_bottom = 0.159973
+text = "Assets Folder +"
+
+[node name="Button7" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525
+anchor_top = 0.667
+anchor_right = 1.0
+anchor_bottom = 0.844
+offset_left = -6.10352e-05
+offset_top = -0.240051
+offset_bottom = 0.319946
+text = "Assets Folder -"
+
+[node name="Button8" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.667
+anchor_right = 0.475
+anchor_bottom = 0.844
+offset_top = -0.240051
+offset_bottom = 0.319946
+text = "Add All"
+
+[node name="Button9" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.889
+anchor_right = 0.475
+anchor_bottom = 0.978
+offset_top = -0.0800171
+offset_bottom = -0.160034
+text = "Colo(u)r Folders"
+
+[node name="Button10" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525
+anchor_top = 0.889
+anchor_right = 1.0
+anchor_bottom = 0.978
+offset_left = -6.10352e-05
+offset_top = -0.0800171
+offset_bottom = -0.160034
+text = "Uncolo(u)r Folders"
+
+[connection signal="button_down" from="Button" to="." method="Scripts"]
+[connection signal="button_down" from="Button2" to="." method="Saves"]
+[connection signal="button_down" from="Button3" to="." method="Objects"]
+[connection signal="button_down" from="Button4" to="." method="Levels"]
+[connection signal="button_down" from="Button5" to="." method="Huds"]
+[connection signal="button_down" from="Button6" to="." method="Assets1"]
+[connection signal="button_down" from="Button7" to="." method="Assets2"]
+[connection signal="button_down" from="Button8" to="." method="All"]
+[connection signal="button_down" from="Button9" to="." method="Colourall"]
+[connection signal="button_down" from="Button10" to="." method="RemoveColour"]
